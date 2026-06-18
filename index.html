@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoRide Electric Vehicles</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <svg class="logo-svg" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="18" fill="#2e7d32" stroke="#81c784" stroke-width="2" />
+        <text x="50%" y="57%" text-anchor="middle" fill="white" font-size="14" font-weight="bold">E</text>
+      </svg>
+      <span class="logo-text">EcoRide</span>
+    </div>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <nav class="nav" id="nav">
+      <a href="#products">Products</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#booking">Book Test Ride</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-btn" id="theme-btn">🌑 Dark Mode</button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Ride Clean. <br> Ride Green.</h1>
+    <p>Electric bikes and scooters built for the future of transport.</p>
+    <a href="#booking" class="ride-btn">Book a Test Ride</a>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+    <h2 class="section-title">Our Electric Vehicles</h2>
+    <div class="product-grid">
+
+      <div class="card">
+        <img src="images/M4.png" alt="M4" />
+        <h3>M4</h3>
+        <p>Urban electric bike with 80km range.</p>
+        <button class="view-btn" onclick="openModal('M4', '80km range, 250W motor, 7-speed gear, USB charging port')">View Specs</button>
+      </div>
+
+      <div class="card">
+        <img src="images/C63.jpg" alt="C63" />
+        <h3>C63</h3>
+        <p>Lightweight scooter for city commutes.</p>
+        <button class="view-btn" onclick="openModal('C63', '60km range, 350W motor, max speed 45km/h, foldable design')">View Specs</button>
+      </div>
+
+      <div class="card">
+        <img src="images/E55.jpg" alt="E55" />
+        <h3>E55</h3>
+        <p>Off-road electric bike for adventurers.</p>
+        <button class="view-btn" onclick="openModal('E55', '120km range, 750W motor, dual suspension, waterproof')">View Specs</button>
+      </div>
+
+      <div class="card">
+        <img src="images/CLS63.png" alt="CLS63" />
+        <h3>CLS63</h3>
+        <p>Portable charging station for on-the-go.</p>
+        <button class="view-btn" onclick="openModal('CLS63', 'Solar + grid charging, 2000W output, compatible with all EcoRide models')">View Specs</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits" id="benefits">
+    <h2 class="section-title">Why Go Electric?</h2>
+    <div class="benefits-grid">
+      <div class="benefit-box">
+        <span class="benefit-icon">🌱</span>
+        <h3>Zero Emissions</h3>
+        <p>No exhaust, no pollution. Better air for everyone.</p>
+      </div>
+      <div class="benefit-box">
+        <span class="benefit-icon">💰</span>
+        <h3>Save on Fuel</h3>
+        <p>Cut your monthly transport costs by up to 70%.</p>
+      </div>
+      <div class="benefit-box">
+        <span class="benefit-icon">🔧</span>
+        <h3>Low Maintenance</h3>
+        <p>Fewer moving parts means fewer trips to the mechanic.</p>
+      </div>
+      <div class="benefit-box">
+        <span class="benefit-icon">⚡</span>
+        <h3>Fast Charging</h3>
+        <p>Full charge in under 3 hours with our smart chargers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section class="booking" id="booking">
+    <h2 class="section-title">Book a Test Ride</h2>
+    <form class="booking-form" id="booking-form">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Ali Ahmed" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="ali@example.com" />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" placeholder="03XX-XXXXXXX" />
+      </div>
+      <div class="form-group">
+        <label for="vehicle">Select Vehicle</label>
+        <select id="vehicle">
+          <option value="">-- Choose a vehicle --</option>
+          <option>M4</option>
+          <option>C63</option>
+          <option>E55</option>
+          <option>CLS63</option>
+        </select>
+      </div>
+      <button type="submit" class="submit-btn">Confirm Booking</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="footer-columns">
+      <div>
+        <h4>EcoRide</h4>
+        <p>Sustainable transport for modern cities.</p>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <p>support@ecoride.com</p>
+        <p>+92 300 1234567</p>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <a href="#"><img src="images/facebook.png" alt="facebook"></a>
+        <a href="#"><img src="images/instagram.png" alt="instagram"></a>
+        <a href="#"><img src="images/twitter.png" alt="twitter"></a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2025 EcoRide. All rights reserved.</p>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close">X</button>
+      <h3 id="modal-title"></h3>
+      <p id="modal-specs"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
